@@ -6,7 +6,7 @@ using namespace eff::engine;
 
 int main(){
 
-        std::cout << "version: " << meta::MODULE_NAME << std::endl;
+        std::cout << "module name: " << meta::MODULE_NAME << std::endl;
 
         return EXIT_SUCCESS;
 }
