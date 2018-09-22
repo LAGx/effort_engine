@@ -6,8 +6,10 @@ project (effort_engine)
 
 #settings
 set(PROJECT_SOURCE_DIR "/home/kvark/effort_project/core")
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 17) #project orientated for c++20 in future
 
+#set(OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/env)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/env)
 
 #is exist project dir
 IF(NOT EXISTS ${PROJECT_SOURCE_DIR})
