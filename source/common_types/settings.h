@@ -1,9 +1,10 @@
 #pragma once
-#include "debug/meta.h"
+#include "common_types/meta.h"
+
 
 
 namespace eff{
-namespace debug{
+namespace common_types{
 namespace settings{
 
         //logging
