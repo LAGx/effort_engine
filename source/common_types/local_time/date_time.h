@@ -30,6 +30,16 @@ public:
     */
     unsigned int operator()(TimeType timeType);
 
+    /*!
+    @brief tools for more efficient using class.
+    use update() than use then get_core()
+    */
+    struct{
+        void update();              //< use before get_core()
+        std::tm& get_core() const;  //< core struct
+
+        DateTime& parent;
+    }high_performance_tool = {*this};
 
 private:
 
