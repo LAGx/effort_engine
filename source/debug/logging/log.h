@@ -16,17 +16,26 @@ namespace debug{
 class Log {
 public:
 
+    ///settings
     struct Settings{
-            std::string filepath = std::string("log") + common_types::PATH_DELIMITER + "Log.log";
-            bool write_time = true;
+        /// relative path for log path
+        std::string filepath = std::string("log") + common_types::PATH_DELIMITER + "Log.log";
+        //si writing current time of logging
+        bool write_time = true;
     };
 
+    /*
+    *@param autoClear is clear file on open
+    */
     Log(Settings&&, bool autoClear = true);
 
+    ///set settings
     void setSettings(Settings&&);
 
+    ///clear current file
     void clear();
 
+    /// input log operator
     template <typename T>
     Log& operator<<(T const& value){
 
