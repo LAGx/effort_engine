@@ -1,9 +1,11 @@
 #pragma once
-#include <string> 
+#include <string>
 
 
 namespace eff{
+///main namespace of graphic module
 namespace graphic{
+///info about graphic module
 namespace meta{
 
         const std::string MODULE_NAME = "GRAPHIC";

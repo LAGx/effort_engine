@@ -1,0 +1,48 @@
+\hypertarget{_2home_2kvark_2effort_project_2core_2source_2common_types_2local_time_2date_time_8h-example}{}\section{/home/kvark/effort\+\_\+project/core/source/common\+\_\+types/local\+\_\+time/date\+\_\+time.\+h}
+functor, that return time of local machine \begin{DoxyWarning}{Warning}
+low performance.
+\end{DoxyWarning}
+Date\+Time loct; loct(\+Date\+Time\+::\+Time\+Type\+::\+Year); //will return 2018 \}
+
+
+\begin{DoxyCodeInclude}
+\textcolor{preprocessor}{#pragma once}
+\textcolor{preprocessor}{#include <string>}
+\textcolor{preprocessor}{#include <chrono>}
+
+
+\textcolor{keyword}{namespace }\hyperlink{namespaceeff}{eff}\{
+\textcolor{keyword}{namespace }common\_types\{
+
+\textcolor{keyword}{class }DateTime\{
+\textcolor{keyword}{public}:
+
+    \textcolor{keyword}{enum class} TimeType: char\{
+        Second = 0, \textcolor{comment}{//< seconds [0, 60]}
+        Minute,     \textcolor{comment}{//< minutes [0, 59]}
+        Hour,       \textcolor{comment}{//< hours   [0, 23]}
+        Day,        \textcolor{comment}{//< days    [1, 31]}
+        Month,      \textcolor{comment}{//< month   [1, 12]}
+        Year        \textcolor{comment}{//< year    [in xxxx format]}
+    \};
+
+    \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \hyperlink{classeff_1_1common__types_1_1DateTime_ab9bcf70b86eb6d080bcef37fb1586ea8}{operator()}(TimeType timeType);
+
+    \textcolor{keyword}{struct}\{
+        \textcolor{keywordtype}{void} update();              \textcolor{comment}{//< use before get\_core()}
+        std::tm& get\_core() \textcolor{keyword}{const};  \textcolor{comment}{//< core struct}
+
+        DateTime& parent;
+    \}\hyperlink{classeff_1_1common__types_1_1DateTime_aadc332411e318afcc44e403161c17a85}{high\_performance\_tool} = \{*\textcolor{keyword}{this}\};
+
+\textcolor{keyword}{private}:
+
+    std::time\_t rawtime;
+    std::tm timeinfo;
+\};
+
+
+\};
+\};
+\end{DoxyCodeInclude}
+ 

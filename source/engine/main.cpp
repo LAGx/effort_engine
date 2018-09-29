@@ -12,12 +12,11 @@ using namespace eff::debug;
 
 int main(){
 
-    Log log(Log::Settings({"log/test.log", true}), true);
+    Log log(Log::Settings({"log.log", false}), true);
 
-    log << "hello world";
-
-    log << "hello world1" << "kek";
-    log << "hello world2";
+    log << "hello";
+    log.setSettings(Log::Settings({"log.log", true}));
+    log << "world";
 
     return EXIT_SUCCESS;
 }

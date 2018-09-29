@@ -11,7 +11,7 @@ namespace eff{
 namespace debug{
 
 /*
-*@brief class for logging
+@brief class for logging
 */
 class Log {
 public:
@@ -20,12 +20,12 @@ public:
     struct Settings{
         /// relative path for log path
         std::string filepath = std::string("log") + common_types::PATH_DELIMITER + "Log.log";
-        //si writing current time of logging
+        /// is writing current time of logging
         bool write_time = true;
     };
 
     /*
-    *@param autoClear is clear file on open
+    @param autoClear is clear file on open
     */
     Log(Settings&&, bool autoClear = true);
 
@@ -35,7 +35,21 @@ public:
     ///clear current file
     void clear();
 
-    /// input log operator
+    /*!
+    input[in] log operator
+
+    <B>example:</B>
+    @code
+    Log log(Log::Settings({"log.log", false}), true);
+    log << "hello";
+    log.setSettings(Log::Settings({"log.log", true}));
+    log << "world";
+
+    // output (log.log):
+    // |> hello
+    // |16:33:19|> world
+    @endcode
+    */
     template <typename T>
     Log& operator<<(T const& value){
 

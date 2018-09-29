@@ -1,9 +1,10 @@
 #pragma once
-#include <string> 
+#include <string>
 
 
 namespace eff{
 namespace engine{
+///info aboute engine module
 namespace meta{
 
         const std::string MODULE_NAME = "ENGINE";
