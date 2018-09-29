@@ -30,7 +30,7 @@ public:
     template <typename T>
     Log& operator<<(T const& value){
 
-        file_stream << (settings.write_time ? makeTimeStr() : "");
+        file_stream << (settings.write_time ? "|" + makeTimeStr() : "");
         file_stream << "|> ";
         file_stream << value;
         file_stream << std::endl;

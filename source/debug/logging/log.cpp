@@ -5,8 +5,8 @@ using namespace eff::debug;
 using namespace std;
 
 Log::Log(Settings&& _settings, bool autoClear){
-    setSettings(std::move(_settings));
-
+    
+    settings = _settings;
     file_stream.open(settings.filepath, std::ofstream::out | std::ofstream::app);
 
     if(autoClear)
@@ -22,6 +22,7 @@ void Log::setSettings(Settings&& _settings){
 
 
 void Log::clear(){
+    file_stream.close();
     file_stream.open(settings.filepath, std::ofstream::out | std::ofstream::trunc);
 }
 

@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <chrono>
 
@@ -44,7 +45,7 @@ public:
 private:
 
     std::time_t rawtime;
-    std::tm* timeinfo;
+    std::tm timeinfo;
 };
 
 

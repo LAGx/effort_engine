@@ -1,5 +1,5 @@
 #pragma once
-#include <string> 
+#include <string>
 
 
 
@@ -8,7 +8,7 @@ namespace debug{
 namespace meta{
 
         const std::string MODULE_NAME = "DEBUG";
-        const std::string VERSION = "0.0.1 alpha";
+        const std::string VERSION = "0.0.2 alpha";
 
 };
 };
