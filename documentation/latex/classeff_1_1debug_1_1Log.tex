@@ -1,0 +1,50 @@
+\hypertarget{classeff_1_1debug_1_1Log}{}\section{eff\+:\+:debug\+:\+:Log Class Reference}
+\label{classeff_1_1debug_1_1Log}\index{eff\+::debug\+::\+Log@{eff\+::debug\+::\+Log}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structeff_1_1debug_1_1Log_1_1Settings}{Settings}
+\begin{DoxyCompactList}\small\item\em settings \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeff_1_1debug_1_1Log_a2377971c124c24c10762866cbcdd222a}\label{classeff_1_1debug_1_1Log_a2377971c124c24c10762866cbcdd222a}} 
+{\bfseries Log} (\hyperlink{structeff_1_1debug_1_1Log_1_1Settings}{Settings} \&\&, bool auto\+Clear=true)
+\item 
+\mbox{\Hypertarget{classeff_1_1debug_1_1Log_a9612cba8ed0b536c0fa0e462d22a6447}\label{classeff_1_1debug_1_1Log_a9612cba8ed0b536c0fa0e462d22a6447}} 
+void \hyperlink{classeff_1_1debug_1_1Log_a9612cba8ed0b536c0fa0e462d22a6447}{set\+Settings} (\hyperlink{structeff_1_1debug_1_1Log_1_1Settings}{Settings} \&\&)
+\begin{DoxyCompactList}\small\item\em set settings \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classeff_1_1debug_1_1Log_ae8e21f6b9c3588008349375f2bdbfa6d}\label{classeff_1_1debug_1_1Log_ae8e21f6b9c3588008349375f2bdbfa6d}} 
+void \hyperlink{classeff_1_1debug_1_1Log_ae8e21f6b9c3588008349375f2bdbfa6d}{clear} ()
+\begin{DoxyCompactList}\small\item\em clear current file \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classeff_1_1debug_1_1Log}{Log} \& \hyperlink{classeff_1_1debug_1_1Log_a5adbb3064e6c035c3fdff199e85c22a2}{operator$<$$<$} (T const \&value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeff_1_1debug_1_1Log_a5adbb3064e6c035c3fdff199e85c22a2}\label{classeff_1_1debug_1_1Log_a5adbb3064e6c035c3fdff199e85c22a2}} 
+\index{eff\+::debug\+::\+Log@{eff\+::debug\+::\+Log}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!eff\+::debug\+::\+Log@{eff\+::debug\+::\+Log}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classeff_1_1debug_1_1Log}{Log}\& eff\+::debug\+::\+Log\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{T const \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+input\mbox{[}in\mbox{]} log operator
+
+{\bfseries example\+:} 
+\begin{DoxyCode}
+Log log(Log::Settings(\{\textcolor{stringliteral}{"log.log"}, \textcolor{keyword}{false}\}), \textcolor{keyword}{true});
+log << \textcolor{stringliteral}{"hello"};
+log.setSettings(Log::Settings(\{\textcolor{stringliteral}{"log.log"}, \textcolor{keyword}{true}\}));
+log << \textcolor{stringliteral}{"world"};
+
+\textcolor{comment}{// output (log.log):}
+\textcolor{comment}{// |> hello}
+\textcolor{comment}{// |16:33:19|> world}
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/debug/logging/log.\+h\item 
+source/debug/logging/log.\+cpp\end{DoxyCompactItemize}

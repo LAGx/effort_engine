@@ -1,0 +1,136 @@
+\hypertarget{classeff_1_1common__types_1_1DateTime}{}\section{eff\+:\+:common\+\_\+types\+:\+:Date\+Time Class Reference}
+\label{classeff_1_1common__types_1_1DateTime}\index{eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}}
+
+
+functor, that return time of local machine  
+
+
+
+
+{\ttfamily \#include $<$date\+\_\+time.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09}{Time\+Type} \+: char \{ \newline
+\hyperlink{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09ac22cf8376b1893dcfcef0649fe1a7d87}{Time\+Type\+::\+Second} = 0, 
+\hyperlink{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09a62902641c38f3a4a8eb3212454360e24}{Time\+Type\+::\+Minute}, 
+\hyperlink{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09ab55e509c697e4cca0e1d160a7806698f}{Time\+Type\+::\+Hour}, 
+\hyperlink{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09a03727ac48595a24daed975559c944a44}{Time\+Type\+::\+Day}, 
+\newline
+\hyperlink{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09a7cbb885aa1164b390a0bc050a64e1812}{Time\+Type\+::\+Month}, 
+\hyperlink{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09a537c66b24ef5c83b7382cdc3f34885f2}{Time\+Type\+::\+Year}
+ \}\begin{DoxyCompactList}\small\item\em time type \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classeff_1_1common__types_1_1DateTime_ab9bcf70b86eb6d080bcef37fb1586ea8}{operator()} (\hyperlink{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09}{Time\+Type} time\+Type)
+\begin{DoxyCompactList}\small\item\em use for get time \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\} \hyperlink{classeff_1_1common__types_1_1DateTime_aadc332411e318afcc44e403161c17a85}{high\_performance\_tool} = \{$\ast$this\}\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em tools for more efficient class using. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+functor, that return time of local machine 
+
+\begin{DoxyWarning}{Warning}
+low performance.
+\end{DoxyWarning}
+{\bfseries example\+:} 
+\begin{DoxyCode}
+DateTime loct;
+cout << loct(\hyperlink{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09a537c66b24ef5c83b7382cdc3f34885f2}{DateTime::TimeType::Year}); \textcolor{comment}{//will return 2018}
+\end{DoxyCode}
+ 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09}\label{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09}} 
+\index{eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}!Time\+Type@{Time\+Type}}
+\index{Time\+Type@{Time\+Type}!eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}}
+\subsubsection{\texorpdfstring{Time\+Type}{TimeType}}
+{\footnotesize\ttfamily enum \hyperlink{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09}{eff\+::common\+\_\+types\+::\+Date\+Time\+::\+Time\+Type} \+: char\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+time type 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Second@{Second}!eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}}\index{eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}!Second@{Second}}}\mbox{\Hypertarget{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09ac22cf8376b1893dcfcef0649fe1a7d87}\label{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09ac22cf8376b1893dcfcef0649fe1a7d87}} 
+Second&seconds \mbox{[}0, 60\mbox{]} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Minute@{Minute}!eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}}\index{eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}!Minute@{Minute}}}\mbox{\Hypertarget{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09a62902641c38f3a4a8eb3212454360e24}\label{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09a62902641c38f3a4a8eb3212454360e24}} 
+Minute&minutes \mbox{[}0, 59\mbox{]} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Hour@{Hour}!eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}}\index{eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}!Hour@{Hour}}}\mbox{\Hypertarget{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09ab55e509c697e4cca0e1d160a7806698f}\label{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09ab55e509c697e4cca0e1d160a7806698f}} 
+Hour&hours \mbox{[}0, 23\mbox{]} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Day@{Day}!eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}}\index{eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}!Day@{Day}}}\mbox{\Hypertarget{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09a03727ac48595a24daed975559c944a44}\label{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09a03727ac48595a24daed975559c944a44}} 
+Day&days \mbox{[}1, 31\mbox{]} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Month@{Month}!eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}}\index{eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}!Month@{Month}}}\mbox{\Hypertarget{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09a7cbb885aa1164b390a0bc050a64e1812}\label{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09a7cbb885aa1164b390a0bc050a64e1812}} 
+Month&month \mbox{[}1, 12\mbox{]} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Year@{Year}!eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}}\index{eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}!Year@{Year}}}\mbox{\Hypertarget{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09a537c66b24ef5c83b7382cdc3f34885f2}\label{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09a537c66b24ef5c83b7382cdc3f34885f2}} 
+Year&year \mbox{[}in xxxx format\mbox{]} \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classeff_1_1common__types_1_1DateTime_ab9bcf70b86eb6d080bcef37fb1586ea8}\label{classeff_1_1common__types_1_1DateTime_ab9bcf70b86eb6d080bcef37fb1586ea8}} 
+\index{eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}!operator()@{operator()}}
+\index{operator()@{operator()}!eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily unsigned int Date\+Time\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{classeff_1_1common__types_1_1DateTime_a7c7c7290ee7be89bae66e68d24c68d09}{Date\+Time\+::\+Time\+Type}}]{\+\_\+time\+Type }\end{DoxyParamCaption})}
+
+
+
+use for get time 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em time\+Type} & what to return\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+time in normal format 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classeff_1_1common__types_1_1DateTime_aadc332411e318afcc44e403161c17a85}\label{classeff_1_1common__types_1_1DateTime_aadc332411e318afcc44e403161c17a85}} 
+\index{eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}!high\+\_\+performance\+\_\+tool@{high\+\_\+performance\+\_\+tool}}
+\index{high\+\_\+performance\+\_\+tool@{high\+\_\+performance\+\_\+tool}!eff\+::common\+\_\+types\+::\+Date\+Time@{eff\+::common\+\_\+types\+::\+Date\+Time}}
+\subsubsection{\texorpdfstring{high\+\_\+performance\+\_\+tool}{high\_performance\_tool}}
+{\footnotesize\ttfamily struct \{ ... \}  eff\+::common\+\_\+types\+::\+Date\+Time\+::high\+\_\+performance\+\_\+tool}
+
+
+
+tools for more efficient class using. 
+
+{\bfseries example\+:} 
+\begin{DoxyCode}
+data.high\_performance\_tool.update();
+cout << \textcolor{stringliteral}{"hours: "} << data.high\_performance\_tool.get\_core().tm\_hour << endl;
+cout << \textcolor{stringliteral}{"minutes: "} << data.high\_performance\_tool.get\_core().tm\_min << endl;
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/common\+\_\+types/local\+\_\+time/date\+\_\+time.\+h\item 
+source/common\+\_\+types/local\+\_\+time/date\+\_\+time.\+cpp\end{DoxyCompactItemize}

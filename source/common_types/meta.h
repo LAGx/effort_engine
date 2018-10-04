@@ -4,6 +4,7 @@
 
 namespace eff{
 namespace common_types{
+///info about common_types module
 namespace meta{
 
         const std::string MODULE_NAME = "COMMON_TYPES";

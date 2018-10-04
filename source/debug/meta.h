@@ -5,6 +5,7 @@
 
 namespace eff{
 namespace debug{
+///info about debug module
 namespace meta{
 
         const std::string MODULE_NAME = "DEBUG";
