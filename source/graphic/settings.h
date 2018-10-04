@@ -1,7 +1,8 @@
 #pragma once
 #include "graphic/meta.h"
-
-
+#include "common_types/essential_types.h"
+#include "common_types/common_settings.h"
+#include "debug/logging/log.h"
 
 namespace eff{
 namespace graphic{
@@ -9,11 +10,22 @@ namespace graphic{
 namespace settings{
 
         ///logging settings block
-        constexpr bool ENABLE_ALL_LOGGING = true;
-        const std::string log_filename = "log_" + meta::MODULE_NAME + ".log";
-        const std::string warning_filename = "warning_" + meta::MODULE_NAME + ".log";
-        const std::string error_filename = "error_" + meta::MODULE_NAME + ".log";
+        const bool ENABLE_INFO_LOGGING = true;
+        const bool ENABLE_WARNING_LOGGING = true;
+        const bool ENABLE_ERROR_LOGGING = true;
 
 };
+
+        debug::Log info_log(debug::Log::Settings({
+                common_types::LOG_FOLDER_NAME + common_types::PATH_DELIMITER + "log_" + meta::MODULE_NAME + ".log"
+                , false, settings::ENABLE_INFO_LOGGING}), true);
+
+        debug::Log warning_log(debug::Log::Settings({
+                common_types::LOG_FOLDER_NAME + common_types::PATH_DELIMITER + "warning_" + meta::MODULE_NAME + ".log"
+                , false, settings::ENABLE_WARNING_LOGGING}), true);
+
+        debug::Log error_log(debug::Log::Settings({
+                common_types::LOG_FOLDER_NAME + common_types::PATH_DELIMITER + "error_" + meta::MODULE_NAME + ".log"
+                , false, settings::ENABLE_ERROR_LOGGING}), true);
 };
 };

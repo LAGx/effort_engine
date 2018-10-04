@@ -22,6 +22,8 @@ public:
         std::string filepath = std::string("log") + common_types::PATH_DELIMITER + "Log.log";
         /// is writing current time of logging
         bool write_time = true;
+        ///is enable logging
+        bool enable = true;
     };
 
     /*
@@ -52,6 +54,9 @@ public:
     */
     template <typename T>
     Log& operator<<(T const& value){
+
+        if(!settings.enable)
+            return *this;
 
         file_stream << (settings.write_time ? "|" + makeTimeStr() : "");
         file_stream << "|> ";

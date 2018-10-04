@@ -20,10 +20,20 @@ namespace debug{
 
         std::string what() const;
 
-    private:
+    protected:
 
         std::string reason;
 
+    };
+
+
+    class InitException: public Exception{
+    public:
+        ///use this conctructor for writing about exception in log
+        InitException( Log& log_object, std::string reason);
+
+        ///use this constructor for just save reason
+        InitException(std::string reason);
     };
 
 

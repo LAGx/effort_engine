@@ -1,4 +1,4 @@
-# by k_vark 
+# by k_vark
 
 cmake_minimum_required (VERSION 3.10)
 project (effort_engine)
@@ -7,9 +7,16 @@ project (effort_engine)
 #settings
 set(PROJECT_SOURCE_DIR "/home/kvark/effort_project/core")
 set(CMAKE_CXX_STANDARD 17) #project orientated for c++20 in future
+add_definitions(-DPROJECT_LOG_FOLDER_NAME="log")
 
 #set(OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/env)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/env)
+
+
+#find packages:
+FIND_PACKAGE(glfw3 REQUIRED)
+find_package(Vulkan REQUIRED)
+add_definitions(-DGLFW_INCLUDE_VULKAN)
 
 #is exist project dir
 IF(NOT EXISTS ${PROJECT_SOURCE_DIR})
@@ -42,3 +49,5 @@ include_directories("${PROJECT_SOURCE_DIR}/source")
 
 
 add_executable(${PROJECT_NAME}.run ${ALL_CPP_NATIVE_CODE})
+
+target_link_libraries(${PROJECT_NAME}.run glfw ${GLFW_LIBRARIES} ${Vulkan_LIBRARY})
