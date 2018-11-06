@@ -1,12 +1,20 @@
-#pragma once
-#include "graphic/meta.h"
-#include "common_types/essential_types.h"
-#include "common_types/common_settings.h"
-#include "debug/logging/log.h"
+#include "graphic/common/meta.h"
+#include "graphic/common/settings.h"
+
+
+
 
 namespace eff{
 namespace graphic{
 ///settings of graphic module
+
+namespace meta{
+
+        const std::string MODULE_NAME = "GRAPHIC";
+        const std::string VERSION = "0.0.2 alpha";
+
+};
+
 namespace settings{
 
         ///logging settings block
@@ -27,5 +35,6 @@ namespace settings{
         debug::Log error_log(debug::Log::Settings({
                 common_types::LOG_FOLDER_NAME + common_types::PATH_DELIMITER + "error_" + meta::MODULE_NAME + ".log"
                 , false, settings::ENABLE_ERROR_LOGGING}), true);
+
 };
 };

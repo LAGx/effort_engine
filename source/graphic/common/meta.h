@@ -8,8 +8,8 @@ namespace graphic{
 ///info about graphic module
 namespace meta{
 
-        const std::string MODULE_NAME = "GRAPHIC";
-        const std::string VERSION = "0.0.1 alpha";
+        extern const std::string MODULE_NAME;
+        extern const std::string VERSION;
 
 };
 };

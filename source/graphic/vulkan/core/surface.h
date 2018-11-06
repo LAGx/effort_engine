@@ -1,7 +1,9 @@
 #pragma once
 #include <GLFW/glfw3.h>
+#include "graphic/common/settings.h"
 #include "debug/exception/common_exceptions.h"
-#include "vulkan/vulkan.h" 
+#include "vulkan/vulkan.h"
+
 namespace eff{
 namespace graphic{
 

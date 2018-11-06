@@ -19,11 +19,3 @@ Exception::Exception(std::string reason): reason(move(reason))
 std::string Exception::what() const{
     return reason;
 }
-
-
-InitException::InitException( Log& log_object, std::string reason): Exception(log_object, move(reason))
-    {}
-
-
-InitException::InitException(std::string reason): Exception(move(reason))
-    {}

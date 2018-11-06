@@ -1,5 +1,5 @@
 #include "graphic/vulkan/core/surface.h"
-#include "graphic/settings.h"
+
 
 using namespace std;
 using namespace eff::graphic;

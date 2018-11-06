@@ -26,14 +26,16 @@ namespace debug{
 
     };
 
-
+    /// exception on initializate
     class InitException: public Exception{
     public:
-        ///use this conctructor for writing about exception in log
-        InitException( Log& log_object, std::string reason);
+        using Exception::Exception;
+    };
 
-        ///use this constructor for just save reason
-        InitException(std::string reason);
+    /// exception on initializate
+    class InvalidArgumentException: public Exception{
+    public:
+        using Exception::Exception;
     };
 
 
